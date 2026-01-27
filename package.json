@@ -4,16 +4,21 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "copy-wasm": "mkdir -p public && cp node_modules/@jsquash/webp/codec/enc/webp_enc.wasm public/",
+    "dev": "npm run copy-wasm && vite",
+    "build": "npm run copy-wasm && vite build",
+    "preview": "vite preview",
+    "postinstall": "npm run copy-wasm"
   },
   "dependencies": {
     "@google/genai": "^1.30.0",
+    "@jsquash/webp": "^1.5.0",
     "lucide-react": "^0.554.0",
-    "recharts": "^3.4.1",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "recharts": "^3.4.1",
+    "vite-plugin-top-level-await": "^1.6.0",
+    "vite-plugin-wasm": "^3.5.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
