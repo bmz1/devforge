@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Generated WASM files
+public/*.wasm
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
