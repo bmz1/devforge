@@ -1,5 +1,5 @@
 import React from 'react';
-import { Braces, FileCode, Key, Fingerprint, Menu, X, ShieldCheck, Image } from 'lucide-react';
+import { Braces, FileCode, FileText, Key, Fingerprint, Menu, X, ShieldCheck, Image } from 'lucide-react';
 import { ToolType } from '../types';
 
 interface SidebarProps {
@@ -16,6 +16,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTool, onSelectTool, isOp
     { id: ToolType.UUID, label: 'UUID Generator', icon: Fingerprint, desc: 'Generate Unique IDs' },
     { id: ToolType.JWT, label: 'JWT Decoder', icon: ShieldCheck, desc: 'Decode Tokens securely' },
     { id: ToolType.WEBP, label: 'WebP Converter', icon: Image, desc: 'Convert images to WebP' },
+    { id: ToolType.MARKDOWN, label: 'Markdown Preview', icon: FileText, desc: 'Live Editor & Preview' },
   ];
 
   return (

@@ -6,6 +6,7 @@ import { Base64Tool } from './components/Base64Tool';
 import { UuidTool } from './components/UuidTool';
 import { JwtTool } from './components/JwtTool';
 import { WebpTool } from './components/WebpTool';
+import { MarkdownTool } from './components/MarkdownTool';
 import { ToolType } from './types';
 
 const App: React.FC = () => {
@@ -19,6 +20,7 @@ const App: React.FC = () => {
       case ToolType.UUID: return <UuidTool />;
       case ToolType.JWT: return <JwtTool />;
       case ToolType.WEBP: return <WebpTool />;
+      case ToolType.MARKDOWN: return <MarkdownTool />;
       default: return <JsonTool />;
     }
   };
