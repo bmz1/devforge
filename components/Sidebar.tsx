@@ -1,5 +1,5 @@
 import React from 'react';
-import { Braces, FileCode, FileText, Key, Fingerprint, Menu, X, ShieldCheck, Image } from 'lucide-react';
+import { Braces, FileCode, FileText, Key, Fingerprint, Menu, X, ShieldCheck, Image, FileImage } from 'lucide-react';
 import { ToolType } from '../types';
 
 interface SidebarProps {
@@ -17,6 +17,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTool, onSelectTool, isOp
     { id: ToolType.JWT, label: 'JWT Decoder', icon: ShieldCheck, desc: 'Decode Tokens securely' },
     { id: ToolType.WEBP, label: 'WebP Converter', icon: Image, desc: 'Convert images to WebP' },
     { id: ToolType.MARKDOWN, label: 'Markdown Preview', icon: FileText, desc: 'Live Editor & Preview' },
+    { id: ToolType.BASE64_IMAGE, label: 'Base64 Image', icon: FileImage, desc: 'Encode & Decode Images' },
   ];
 
   return (
@@ -40,7 +41,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ activeTool, onSelectTool, isOp
               <div className="bg-primary-600 p-2 rounded-lg">
                 <Key className="w-5 h-5 text-white" />
               </div>
-              <h1 className="text-xl font-bold text-white tracking-tight">DevForge</h1>
+              <h1 className="text-xl font-bold text-white tracking-tight">Tools</h1>
             </div>
             <button onClick={() => setIsOpen(false)} className="md:hidden text-slate-400 hover:text-white">
               <X className="w-6 h-6" />

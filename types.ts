@@ -4,7 +4,8 @@ export enum ToolType {
   UUID = 'UUID',
   JWT = 'JWT',
   WEBP = 'WEBP',
-  MARKDOWN = 'MARKDOWN'
+  MARKDOWN = 'MARKDOWN',
+  BASE64_IMAGE = 'BASE64_IMAGE'
 }
 
 export interface JsonAnalysisResult {

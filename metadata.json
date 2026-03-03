@@ -1,5 +1,5 @@
 {
-  "name": "DevForge",
+  "name": "Tools",
   "description": "A secure, client-side suite of developer tools including JSON formatting, Base64 utilities, UUID generation, and JWT decoding, enhanced with AI insights.",
   "requestFramePermissions": []
 }

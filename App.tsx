@@ -7,6 +7,7 @@ import { UuidTool } from './components/UuidTool';
 import { JwtTool } from './components/JwtTool';
 import { WebpTool } from './components/WebpTool';
 import { MarkdownTool } from './components/MarkdownTool';
+import { Base64ImageTool } from './components/Base64ImageTool';
 import { ToolType } from './types';
 
 const App: React.FC = () => {
@@ -21,6 +22,7 @@ const App: React.FC = () => {
       case ToolType.JWT: return <JwtTool />;
       case ToolType.WEBP: return <WebpTool />;
       case ToolType.MARKDOWN: return <MarkdownTool />;
+      case ToolType.BASE64_IMAGE: return <Base64ImageTool />;
       default: return <JsonTool />;
     }
   };
@@ -40,7 +42,7 @@ const App: React.FC = () => {
            <button onClick={() => setIsSidebarOpen(true)} className="text-slate-300 hover:text-white">
              <Menu size={24} />
            </button>
-           <span className="ml-4 font-semibold text-white">DevForge</span>
+           <span className="ml-4 font-semibold text-white">Tools</span>
         </div>
 
         <div className="flex-1 overflow-y-auto custom-scrollbar p-0 md:p-2">
